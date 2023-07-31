@@ -1,0 +1,313 @@
+
+input[type='textarea'],
+select,
+textarea {
+  width: 100%; 
+  padding: 50px; 
+  border: 1px solid #ccc; 
+  border: black;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  overflow-wrap: break-word;
+  font-family:AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+  resize: vertical; 
+}
+.selected-prompt {
+  filter: brightness(50%); 
+  background-color: #ccc;
+ 
+}
+
+.border{
+  border: 2px solid black;
+  padding: 10px;
+}
+
+input[type='submit'] {
+  background-color: 333;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+input[type='submit']:hover {
+  background-color: f90;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+/* #overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+  align-items: 'center';
+  justify-content: 'center';
+} */
+
+#overlayText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#myImage {
+  max-inline-size: '100%';
+  block-size: 'auto';
+}
+
+.new{ width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+  max-height: 200px;}
+
+
+.alert {
+  padding: 20px;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #f44336; 
+  color: white;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+} 
+.image-container {
+  display: flex;
+  justify-content: center;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.image-item {
+  flex: 0 0 33.33%;
+  margin: 10px;
+  width: 300px;
+  height: 450px;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: left; */
+    justify-content: flex-start;
+    background-color: white; /* Replace with your preferred background color */
+    min-height: 100vh; 
+    font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.submit-button {
+  margin-top: 5px;
+  padding: 10px 10px;
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: bold;
+  background-color: #232f3e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.submit-button:hover {
+  background-color: #555;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.warning {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Style the prompt options section */
+.prompt-options {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.prompt-options label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.inputlabel {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.prompt-options select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.prompt-options select option {
+  font-size: 14px;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#overlay.loading::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.prompt-option-button {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border: none;
+  background-size: cover;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  font-family: AmazonEmber;
+}
+
+.progressbar {
+  background-color: #232f3e; 
+  color: #232f3e;
+  background: #232f3e;
+}
+
+
+.summary {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #232f3e;
+  font-family:AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  padding: 10px;
+  border-radius:5px;
+  margin-left:  10px;
+}
+
+.caption {
+  margin-top: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #232f3e;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+  border-radius:5px;
+  padding: 10px;
+  margin-left:  10px;
+}
+
+.new{
+  padding: 10px 10px;
+  margin-left: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #232f3e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+
+}
+
+
+.new:hover {
+  background-color: #555;
+  font-family: AmazonEmber,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
