@@ -35,18 +35,6 @@ Steps to set up the project :
 
 ```
 
-### Project Directory
-
-langchain_text_to_image/
-  |-- backend
-    |-- octank-app
-      |-- sam-template.yaml        
-        |-- src/
-          |-- app.py 
-  |-- octankfrontend
-    |-- amplify.yml                    
-
-
 ### Test and Deploy the project
 1. Local Testing
   ```
