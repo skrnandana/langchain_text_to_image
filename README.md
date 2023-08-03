@@ -1,5 +1,4 @@
 ### Intern Name : Kavya Rama Nandana Sidda
-### Alias : kavyarns
 ### Project Name : Text to Image Using Automatic Prompt Generator
 ### Project URL : https://github.com/skrnandana/langchain_text_to_image
 
