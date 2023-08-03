@@ -1,0 +1,3 @@
+[submodule "octankfrontend"]
+	path = octankfrontend
+	url = https://github.com/skrnandana/octankfrontend.git

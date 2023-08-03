@@ -17,12 +17,11 @@ lint = true
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
 resolve_s3 = true
-s3_prefix = "octank-text-to-image"
+s3_prefix = "octank-app"
 region = "us-east-1"
 disable_rollback = true
 image_repositories = []
-stack_name = "octank-text-to-image"
-parameter_overrides = "AccessToken=\"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\" GithubURL=\"https://github.com/skrnandana/octankfrontend.git\""
+parameter_overrides = "AccessToken=\"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\" GithubURL=\"https://github.com/skrnandana/octankfrontend.git\""
 
 [default.package.parameters]
 resolve_s3 = true

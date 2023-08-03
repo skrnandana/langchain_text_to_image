@@ -29,7 +29,7 @@ result = {"summary": "","imageLink": "", "clickbait":"", "prompt":""}
 
 #Defining the jumpstart deployed endpoints
 sagemaker_jumpstart_summarization_endpoint = "jumpstart-dft-hf-llm-falcon-7b-instruct-bf16"
-sagemaker_jumpstart_stable_diffusion_endpoint = "jumpstart-dft-stable-diffusion-v2-1-base"
+sagemaker_jumpstart_stable_diffusion_endpoint = "jumpstart-ftd-stable-diffusion-v2-1-base"
 
 
 #To format the input and get the output from summarization model
@@ -138,7 +138,7 @@ def get_textToImage_chain(stable_diffusion_endpoint, prompt_specification):
         content_handler=content_handler,
         endpoint_name=stable_diffusion_endpoint,
         region_name='us-east-1',
-        model_kwargs= {"num_images_per_prompt":3, "num_inference_steps":14,"height":320, "width":400, "negative_prompt":"1,pencil, of, words,cis, images, note, text, blog, article, human, text, {, }, english, 2,3,4,5,6,7,8,9,0,$,\n ,40,amazon,Convert ,people, into,an,above, Download, book, planner, know, read, write, study, article,  interactive,numbers, captions, sentences, dollars, symbols, out of frame, lowres, text, error, cropped, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, username, watermark, signature,writing, watermark, logos, text,words, letters, poorly Rendered face, poorly drawn face, low resolution, Images cut out at the top, left, right, bottom, blurry image, blurry image, mutated body parts"}
+        model_kwargs= {"num_images_per_prompt":3, "num_inference_steps":10,"height":320, "width":400, "negative_prompt":"1,pencil, of, words,cis, images, note, text, blog, article, human, text, {, }, english, 2,3,4,5,6,7,8,9,0,$,\n ,40,amazon,Convert ,people, into,an,above, Download, book, planner, know, read, write, study, article,  interactive,numbers, captions, sentences, dollars, symbols, out of frame, lowres, text, error, cropped, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, username, watermark, signature,writing, watermark, logos, text,words, letters, poorly Rendered face, poorly drawn face, low resolution, Images cut out at the top, left, right, bottom, blurry image, blurry image, mutated body parts"}
     )
     text_to_image_chain = LLMChain(llm=texttoimage_model, prompt=prompt,output_key="image")
     return text_to_image_chain

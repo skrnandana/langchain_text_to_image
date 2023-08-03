@@ -79,7 +79,7 @@ Resources:
               - GET
             AllowedOrigins:
               - '*'
-      BucketName: images-bucket-octank
+      BucketName: images-bucket-octank-1
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
